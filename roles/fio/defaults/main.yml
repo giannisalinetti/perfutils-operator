@@ -2,3 +2,11 @@
 # defaults file for Fio
 fio_name: "fio"
 node_name: ""
+fio_args:
+  - --name=fsyncwrite
+  - --ioengine=sync
+  - --fdatasync=1
+  - --iodepth=1
+  - --rw=write
+  - --bs=4m 
+  - --size=22m
