@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- perf_v1_perfutils.yaml
+- perf_v1_fio.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

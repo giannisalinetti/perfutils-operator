@@ -1,0 +1,11 @@
+domain: rhocplab.com
+layout: ansible.sdk.operatorframework.io/v1
+projectName: perfutils-operator
+resources:
+- group: perf
+  kind: PerfUtils
+  version: v1
+- group: perf
+  kind: Fio
+  version: v1
+version: 3-alpha

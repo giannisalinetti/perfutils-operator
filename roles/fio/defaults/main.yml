@@ -1,0 +1,4 @@
+---
+# defaults file for Fio
+fio_name: "fio"
+node_name: ""

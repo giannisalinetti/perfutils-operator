@@ -1,0 +1,24 @@
+# permissions for end users to edit fios.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: fio-editor-role
+rules:
+- apiGroups:
+  - perf.rhocplab.com
+  resources:
+  - fios
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - perf.rhocplab.com
+  resources:
+  - fios/status
+  verbs:
+  - get

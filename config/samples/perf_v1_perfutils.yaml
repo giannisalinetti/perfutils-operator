@@ -1,0 +1,6 @@
+apiVersion: perf.rhocplab.com/v1
+kind: PerfUtils
+metadata:
+  name: perfutils-sample
+spec:
+  nodeName: master-1

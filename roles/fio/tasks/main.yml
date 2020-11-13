@@ -1,0 +1,25 @@
+# tasks file for Fio
+---
+- name: Ensure Privileged SCC is bound to the namespace Role
+  community.kubernetes.k8s:
+    state: present
+    template: "templates/role.yaml.j2"
+    namespace: "{{ ansible_operator_meta.namespace }}"
+    wait: True
+    wait_timeout: 120
+
+- name: Ensure Role is bound to namespace RoleBinding
+  community.kubernetes.k8s:
+    state: present
+    template: "templates/rolebinding.yaml.j2"
+    namespace: "{{ ansible_operator_meta.namespace }}"
+    wait: True
+    wait_timeout: 120
+
+- name: Ensure Fio job is created on the target node
+  community.kubernetes.k8s:
+    state: present
+    template: "templates/fio_job.yaml.j2"
+    namespace: "{{ ansible_operator_meta.namespace }}"
+    wait: True
+    wait_timeout: 120

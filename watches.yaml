@@ -1,0 +1,11 @@
+---
+# Use the 'create api' subcommand to add watches to this file.
+- version: v1
+  group: perf.rhocplab.com
+  kind: PerfUtils
+  role: perfutils
+- version: v1
+  group: perf.rhocplab.com
+  kind: Fio
+  role: fio
+# +kubebuilder:scaffold:watch
